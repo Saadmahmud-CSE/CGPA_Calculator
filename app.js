@@ -1,23 +1,23 @@
 function gradeCalc(grade, unit) {
-    if (grade === "A+") {
+    if (grade === "4.00 (A+)") {
       return 4.00 * unit;
-    } else if (grade === "A") {
+    } else if (grade === "3.75 (A)") {
       return 3.75 * unit;
-    } else if (grade === "A-") {
+    } else if (grade === "3.50 (A-)") {
       return 3.50 * unit;
-    } else if (grade === "B+") {
+    } else if (grade === "3.25 (B+)") {
       return 3.25 * unit;
-    } else if (grade === "B") {
+    } else if (grade === "3.00 (B)") {
       return 3.00 * unit;
-    } else if (grade === "B-") {
+    } else if (grade === "2.75 (B-)") {
       return 2.75 * unit;
-    }else if (grade === "C+") {
+    }else if (grade === "2.50 (C+)") {
       return 2.50 * unit;
-    }else if (grade === "C") {
+    }else if (grade === "2.25 (C)") {
       return 2.25 * unit;
-    }else if (grade === "D") {
+    }else if (grade === "2.00 (D)") {
       return 2.00 * unit;
-    }else if (grade === "F") {
+    }else if (grade === "0.00 (F)") {
       return 0.00 * unit;
     }
   }
@@ -33,16 +33,16 @@ function gradeCalc(grade, unit) {
       <div><input type="number" placeholder="Credit Unit" class="credit-units key-${counter}" required></div>
       <div><select class="grade key-${counter}" required>
         <option value="select">Select</option>
-        <option value="4.00">A+</option>
-        <option value="3.75">A</option>
-        <option value="3.50">A-</option>
-        <option value="3.25">B+</option>
-        <option value="3.00">B</option>
-        <option value="2.75">B-</option>
-        <option value="2.50">C+</option>
-        <option value="2.25">C</option>
-        <option value="2.00">D</option>
-        <option value="0.00">F</option>
+        <option value="4.00">4.00 (A+)</option>
+        <option value="3.75">3.75 (A)</option>
+        <option value="3.50">3.50 (A-)</option>
+        <option value="3.25">3.25 (B+)</option>
+        <option value="3.00">3.00 (B)</option>
+        <option value="2.75">2.75 (B-)</option>
+        <option value="2.50">2.50 (C+)</option>
+        <option value="2.25">2.25 (C)</option>
+        <option value="2.00">2.00 (D)</option>
+        <option value="0.00">0.00 (F)</option>
       </select></div> 
     </form>
     `;
@@ -96,7 +96,7 @@ function gradeCalc(grade, unit) {
     const gpa = totalEarnedUnits / totalUnits;
     
     if (gpa >= 0){
-      CGPAPARAGRAPH.textContent = "Your CGPA is " + gpa.toFixed(2);   
+      CGPAPARAGRAPH.textContent = "Your CGPA is " + gpa.toFixed(2);
     } else {
       CGPAPARAGRAPH.textContent = "Please Enter a Valid Grade and Credit Units.";    
     }
